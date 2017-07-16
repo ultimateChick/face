@@ -1,0 +1,3 @@
+itsdangerous==0.24
+django==1.8.9
+requests==2.11.1

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://note.youdao.com/yws/mapi/wcp?method=putfile&keyfrom=wcp&from=chrome&confirm=false&e=true&vendor=ChromeStore&vn=2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./hm.js.下载"></script><script src="./hm.js.下载"></script><script language="javascript" src="./encrypt.js.下载"></script>
+    <title>登录有道云笔记</title>
+            <link type="text/css" rel="stylesheet" href="./clipper-chrome.css.下载">
+    	<script type="text/javascript" src="./crossDomain.js.下载"></script>
+	<script type="text/javascript">
+		croDomain.postMessage('resize_login','http://www.17sucai.com/pins/demoshow/23756');
+				// croDomain.postMessage('remove','http://www.17sucai.com/pins/demoshow/23756');
+	</script>
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?8875c662941dbf07e39c556c8d97615f";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body style="border:0px;padding:0px;margin:0px">
+<div id="doc-login">
+    <div id="ydNoteWebClipper-Login">
+        <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2#" id="close" class="close"></a>
+        <div class="ydnwc-dialog-login-hd">
+            <img src="./logo-web-clipper.svg.下载" alt="有道云笔记">
+            <span class="login">有道云笔记</span>
+            <img class="separator" src="./separator.png.下载">
+            <span class="login">网页剪报</span>
+        </div>
+
+                <div class="ydnwc-dialog-login-form">
+            <form class="ydnwc-dialog-form" id="_YNoteInfoForm" name="_YNoteInfoForm" action="http://note.youdao.com/yws/mapi/wcp?method=login&amp;from=chrome&amp;keyfrom=wcp&amp;vn=2&amp;vendor=ChromeStore" method="POST" enctype="multipart/form-data" onsubmit="return fCheck()">
+                <div class="row login-error">
+                    <div class="row-hd"></div>
+                    <div class="row-bd">
+                        <span class="highlight" id="infoDiv">
+                                                    &nbsp;&nbsp;
+                                                </span>
+                    </div>
+                </div>
+                <div class="row-1">
+                    <div class="row-bd">
+                                                    <input type="text" tabindex="1" class="ydnwc-dialog-text-input" style="color:#898989;fill:#F9F9F9;" autocomplete="off" id="user" name="user" placeholder="账号">
+                                                <!--<p id="ydnwc-dialog-text-id" class="ydnwc-dialog-text-id">账号</p>-->
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="row-bd">
+                        <!--<input type="password" tabIndex="2" class="ydnwc-dialog-text" id="pass" name="pass">-->
+                        <input type="password" id="passPlain" class="ydnwc-dialog-text-input" style="color:#898989;fill:#F9F9F9;" tabindex="2" placeholder="密码">
+                        <!--<p id="ydnwc-dialog-text-password" class="ydnwc-dialog-text-password">密码</p>-->
+                        <input type="hidden" id="pass" name="pass" class="text">
+                    </div>
+                </div>
+                <div class="row-1">
+                    <div class="row-bd">
+                        <label for="rem" class="ydnwc-dialog-text-label"><input type="checkbox" style="vertical-align: middle;" id="rem" name="rem" checked="true">自动登录</label>
+                        <a class="a-normal" href="http://reg.163.com/getpasswd/RetakePassword.jsp" target="_blank">忘记密码？</a>
+                    </div>
+                </div>
+                <div class="row-1" style="height: 100px;">
+                    <input class="ydnwc-dialog-btn" type="submit" id="loginbtn" name="loginbtn" value="登 录" onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;login-btn-extension&#39;, &#39;click&#39;])">
+                    <a class="register-id" href="http://reg.163.com/reg/reg0_new.jsp?product=ynote" target="_blank" onclick="_hmt.push([&#39;_trackEvent&#39;, &#39;netEase-passport-extension&#39;, &#39;click&#39;])">新用户注册</a>
+                </div>
+                <div style="display:none">
+                    <input type="hidden" value="&lt;div style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:21.6px;color:rgb(51, 51, 51);text-align:start;float:none;width:1664px;height:452px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgb(255, 255, 255) none repeat 0% 0%;&#39;&gt;&lt;div style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:32px;color:rgb(51, 51, 51);text-align:start;float:none;width:1664px;height:32px;border-top:0px none rgb(51, 51, 51);border-bottom:1px solid rgb(221, 221, 221);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgb(238, 238, 238) none repeat 0% 0%;&#39;&gt;&lt;span style=&#39;font-size:14px;font-style:normal;font-weight:bold;font-family:&amp;#24494;&amp;#36719;&amp;#38597;&amp;#40657;, &amp;#23435;&amp;#20307;;line-height:32px;padding:0px 10px 0px 10px;color:rgb(51, 51, 51);text-align:start;float:left;overflow:hidden;width:360px;height:32px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) none repeat 0% 0%;&#39;&gt;&lt;a href=&quot;http://www.17sucai.com/pins/23756.html&quot; style=&#39;font-size:14px;font-style:normal;font-weight:bold;font-family:&amp;#24494;&amp;#36719;&amp;#38597;&amp;#40657;, &amp;#23435;&amp;#20307;;line-height:32px;padding:0px 10px 0px 10px;color:rgb(51, 51, 51);text-align:start;float:left;overflow:hidden;width:360px;height:32px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) none repeat 0% 0%;&#39;&gt;jQuery&amp;#22270;&amp;#29255;&amp;#19978;&amp;#20256;&amp;#25554;&amp;#20214;&amp;#22810;&amp;#24352;&amp;#22270;&amp;#29255;&amp;#19978;&amp;#20256;&amp;#39044;&amp;#35272;&amp;#25928;&amp;#26524;&lt;/a&gt;&lt;/span&gt;&lt;a href=&quot;http://www.17sucai.com/preview/1/2017-03-28/imgUp/index.html&quot; style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:1188px;margin:6px 10px 0px 10px;color:rgb(51, 51, 51);text-align:start;float:right;overflow:hidden;width:20px;height:20px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) url(&quot;http://www.17sucai.com/Public/images/close-demo.gif&quot;) no-repeat 0px;&#39;&gt;&amp;#20851;&amp;#38381;&lt;/a&gt;&lt;span style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:32px;margin:8px 5px 0px 0px;color:rgb(51, 51, 51);text-align:start;float:right;overflow:hidden;width:468px;height:15px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) none repeat 0% 0%;&#39;&gt;&lt;div style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:32px;color:rgb(51, 51, 51);text-align:start;float:none;width:468px;height:15px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) none repeat 0% 0%;&#39;&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;font-size:12px;font-style:normal;font-weight:normal;line-height:21.6px;color:rgb(51, 51, 51);text-align:start;float:none;overflow:hidden;width:1664px;height:419px;border-top:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);text-decoration:none;background:rgba(0, 0, 0, 0) none repeat 0% 0%;&#39;&gt;&lt;/div&gt;&lt;/div&gt;" name="bs">
+                    <input type="hidden" value="/wcp1499946369410952" name="p">
+                    <input type="hidden" value="jQuery图片上传插件多张图片上传预览效果_素材中国17素材网" name="tl">
+                    <input type="hidden" id="src" value="http://www.17sucai.com/pins/demoshow/23756" name="src">
+                    <input type="hidden" value="3677" name="len">
+                    <input type="hidden" value="FullPage" name="type" id="type">
+                    <input type="hidden" value="false" name="e">
+                    <input type="hidden" value="chrome" name="from">
+                    <input type="hidden" value="false" name="confirm">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="straight-line"></div>
+    <div id="openid">
+        <div style="margin-bottom: 12px">
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="weChat">微信</a>
+            <span style="background: #E2E2E2;margin-left: 14px;padding-left: 1px;"></span>
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="sina">新浪微博</a>
+            <span style="background: #E2E2E2;margin-left: 14px;padding-left: 1px;"></span>
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="qq">QQ</a>
+        </div>
+        <div id="login-table">
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="tencentWeibo"></a>
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="huawei"></a>
+            <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2" class="email"></a>
+        </div>
+    </div>
+    <div id="login-folder-up">
+        <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2#" id="folder-login-table" class="folder-up-text">收起</a>
+    </div>
+    <div id="login-more">
+        <a href="http://note.youdao.com/yws/mapi/wcp?method=putfile&amp;keyfrom=wcp&amp;from=chrome&amp;confirm=false&amp;e=true&amp;vendor=ChromeStore&amp;vn=2#" id="folder-login-more" class="folder-down-text">更多其他登录方式</a>
+    </div>
+    <div id="loadingview" class="loading" name="loadingview" style="display:none">正在登录，请稍候……</div>
+</div><!-- end login -->
+
+
+
+    <script type="text/javascript" src="./close.js.下载"></script>
+    <script type="text/javascript" src="./log.js.下载"></script>
+    <script type="text/javascript">
+        var _$ = function (id) {return document.getElementById(id);},
+            _isFirstTime = true,
+            _isPSWFirstTime = true,
+            parent_url = _$('src').value,
+            userTxt = _$("user"),
+            userPSW = _$("passPlain"),
+//            usrIdTxt = _$("ydnwc-dialog-text-id"),
+//            usrPSWTxt = _$("ydnwc-dialog-text-password"),
+            form = _$('_YNoteInfoForm'),
+            openid = _$('openid'),
+            folderTable = _$('folder-login-table'),
+            folderMore = _$('folder-login-more'),
+            _hint = '账号',
+            authUrl = {
+                sina: '/auth/tsina?app=web&f=true&pe=1',
+                qq: '/auth/qq/cqq?app=web&f=true&pe=1',
+                weChat: '/login/acc/login?app=web&product=YNOTE&tp=weixin&cf=2&fr=1',
+                download: '//note.youdao.com',
+                tencentWeibo: '/login/acc/login?app=web&product=YNOTE&tp=wqq&cf=2&fr=1',
+                huawei: '/login/acc/login?app=web&product=YNOTE&tp=huawei&cf=2&fr=1',
+                email: '/login/acc/login?app=web&tp=qiye&product=YNOTE&cf=2&fr=1'
+            };
+
+        function fCheck () {
+            if (userTxt.value == "" || userTxt.value == _hint) {
+                _$("infoDiv").innerHTML = "请输入账号";
+                _$("user").focus();
+                return false;
+            } else if (_$("passPlain").value == "") {
+                _$("infoDiv").innerHTML = "请输入密码";
+                _$("passPlain").focus();
+                return false;
+            }
+            //_$("content").style.display = "none";
+            _$("loadingview").style.display = "block";
+            setCookieYNote('LAST_LOGIN', userTxt.value);
+            _$("pass").value = MD5_hexhash(_$("passPlain").value);
+            croDomain.postMessage('loading','http://www.17sucai.com/pins/demoshow/23756');
+            return true;
+        }
+
+//        userTxt.onclick = function() {
+//            if (_isFirstTime) {
+//                _isFirstTime =  false;
+//                usrIdTxt.style.display = "none";
+//                userTxt.style.color = "#898989";
+//            }
+//        };
+//
+//        userTxt.onfocus = function() {
+//            if (!_isFirstTime) {
+//                usrIdTxt.style.display = "none";
+//                userTxt.style.color = "#898989";
+//            }
+//        };
+//
+//        userTxt.onblur = function () {
+//            var userInput = userTxt.value.trim();
+//            if (userInput == "") {
+//                usrIdTxt.style.display = "block";
+//                userTxt.style.color = "#898989";
+//                return;
+//            }
+//        };
+//
+//        userPSW.onclick = function() {
+//            if (_isPSWFirstTime) {
+//                _isPSWFirstTime =  false;
+//                usrPSWTxt.style.display = "none";
+//            }
+//        };
+//
+//        userPSW.onfocus = function() {
+//            if (!_isPSWFirstTime) {
+//                usrPSWTxt.style.display = "none";
+//            }
+//        };
+//
+//        userPSW.oninput = function() {
+//            usrPSWTxt.style.display = "none";
+//        };
+//
+//        userPSW.onblur = function () {
+//            var userInput = userPSW.value.trim();
+//            if (userInput == "") {
+//                usrPSWTxt.style.display = "block";
+//                return;
+//            }
+//        };
+
+        var setCookieYNote = function(k,v,d) {
+            if (!d) {
+                d = new Date(new Date().getTime()+3600*24*3600*1000).toGMTString();
+            }
+            document.cookie = k+"="+v+";expires="+d+";path=/;domain="+location.host.substring(4);
+        };
+
+        var getCookie = function(name) {
+            var cookie = document.cookie;
+            var cookies = cookie.split(";");
+            for (var i=0;i<cookies.length;i++) {
+                var kv = cookies[i].split("=");
+                if (kv[0].replace(/(^\s*)|(\s*$)/g, "") == name) {
+                    return kv[1] && kv[1].length?kv[1]:null;
+                }
+            }
+            return false;
+        };
+        var info = getCookie("LAST_LOGIN");
+        if (info) {
+            userTxt.value = info;
+            userTxt.style.color = "#000";
+        };
+        var authSuccess = function () {
+            form.onsubmit = function () {};
+            form.submit();
+        };
+        var listenCookie = (function () {
+            var timer = null;
+            return function (callback) {
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    var islogin = getCookie('YNOTE_LOGIN');
+                    if (islogin) {
+                        callback();
+                        clearInterval(timer);
+                    }
+                }, 500);
+            };
+        })();
+
+        var delegateAuth = function (e) {
+            var evt = window.event ? window.event : e,
+                target = evt.target || evt.srcElement,
+                currentTarget = e ? e.currentTarget : this;
+            evt.preventDefault && evt.preventDefault();
+            if (target.tagName === 'A' || target.tagName === 'INPUT') {
+                var className = target.className;
+                _hmt.push(['_trackEvent', className + '-extention', 'click']);
+                window.open(authUrl[className]);
+                if (className !== 'download') {
+                    listenCookie(authSuccess);
+                }
+            }
+            return false;
+        }
+        openid.onclick = delegateAuth;
+
+        var hideLoginTable = function () {
+            _$('login-table').style.visibility = "hidden";
+            _$('login-folder-up').style.visibility = "hidden";
+            _$('login-more').style.visibility = "visible";
+        }
+        var showLoginTable = function () {
+            _$('login-table').style.visibility = "visible";
+            _$('login-folder-up').style.visibility = "visible";
+            _$('login-more').style.visibility = "hidden";
+        }
+        folderTable.onclick = hideLoginTable;
+        folderMore.onclick = showLoginTable;
+
+        window.onload = function(){
+            _hmt.push(['_trackEvent', 'login-page-extention', 'loadPage']);
+        }
+    </script>
+
+
+<audio controls="controls" style="display: none;"></audio></body><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>
