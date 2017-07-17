@@ -111,6 +111,7 @@ $(function(){
                 console.log(jqXHR.responseText);
                 var responseText = jQuery.parseJSON(jqXHR.responseText);
                 console.log(responseText);
+				alert(responseText);
               }
 
 
