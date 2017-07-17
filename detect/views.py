@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 
 from face.settings import api_key, api_secret
+from detect.models import *
 
 # Create your views here.
 
@@ -13,10 +14,11 @@ api_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
 # todo:前端发请求还是后端发请求
 
 
-def request_detect():
-    info = {"api_key": api_key, "api_secret": api_secret, "image_url": "http://imgsrc.baidu.com/image/c0%3Dshijue%2C0%2C0%2C245%2C40/sign=dbd6d36b3312b31bd361c56aee715c0f/a8ec8a13632762d05f58eb93aaec08fa513dc6bc.jpg",
+def request_detect(file_path):
+    file = {"image_file": open(file_path, "rb")}
+    info = {"api_key": api_key, "api_secret": api_secret,
             "return_attributes": "gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity"}
-    r = requests.post(api_url, data=info)
+    r = requests.post(api_url, data=info, files=file)
     return simplejson.loads(r.text)
 
 
@@ -45,7 +47,10 @@ def detect(request):
             return JsonResponse(result, status=405)
 
         else:
-            dic = request_detect()
+            f = request.FILES.get("file")
+            new_picture = Picture.objects.create()
+            file_path = new_picture.avatar_file_save(f)
+            dic = request_detect(file_path)
             faceList = dic["faces"]
             faceDict = faceList[0]
             rectangleDict = faceDict["face_rectangle"]
