@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from django.db import IntegrityError
 
 from account.models import Account
-
+from account.sendemail import *
 
 
 # Create your views here.
@@ -65,6 +65,22 @@ def login(request):
         return JsonResponse(result, status=405)
 
 
+def send_active_email(request):
+    result = {"message": "unknown", "issuccess": False}
+    if request.user.is_authenticated():
+        if request.method == "POST":
+            username = request.user.username
+            sendemails(username)
+            result["issuccess"] = True
+            return JsonResponse(result, status=200)
+        else:
+            result["message"] = u"不支持的请求方式"
+            return JsonResponse(result, status=405)
+    else:
+        result["message"] = u"需要登录"
+        return JsonResponse(result, status=403)
+
+
 def activate(request, token):
     result = {"issuccess": False, "message": "unknown"}
     try:
@@ -79,3 +95,5 @@ def activate(request, token):
         return JsonResponse(result, status=402)
     account.isverify = True
     account.save()
+    result["issuccess"] = True
+    return JsonResponse(result, status=200)

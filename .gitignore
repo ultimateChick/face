@@ -1,0 +1,4 @@
+.idea
+face/settings.py
+db.sqlite3
+*/migrations
