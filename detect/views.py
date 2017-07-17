@@ -39,33 +39,39 @@ def select(dict):
 def detect(request):
     info = {}
     result = {"message": "unknown", "info": info, "issuccess": False}
-    if request.method != "POST": # todo:决定请求方式
-        result["message"] = "method not allowed"
-        return JsonResponse(result, status=405)
+    if request.user.is_authenticated():
+        if request.method != "POST": # todo:决定请求方式
+            result["message"] = "method not allowed"
+            return JsonResponse(result, status=405)
 
+        else:
+            dic = request_detect()
+            faceList = dic["faces"]
+            faceDict = faceList[0]
+            rectangleDict = faceDict["face_rectangle"]
+            AttributeDict = faceDict["attributes"]
+            info["position"] = rectangleDict
+            info["gender"] = AttributeDict["gender"]["value"]
+            info["age"] = AttributeDict["age"]["value"]
+            smileThreshold = AttributeDict["smile"]["threshold"]
+            smileValue = AttributeDict["smile"]["value"]
+            if (smileValue > smileThreshold):
+                info["smile"] = True
+            else:
+                info["smile"] = False
+            # todo：人脸姿势、人脸质量（用于人脸比对）
+            info["emotion"] = select(AttributeDict["emotion"])
+            info["eyestatus"] = select(AttributeDict["eyestatus"])
+            ethValue = AttributeDict["ethnicity"]["value"]
+            if ethValue == "Asian":
+                info["ethnicity"] = "asian"
+            elif ethValue == "White":
+                info["ethnicity"] = "white"
+            else:
+                info["ethnicity"] = "black"
+            result["issuccess"] = True
+            return JsonResponse(result, status=200)
     else:
-        dic = request_detect()
-        faceList = dic["faces"]
-        faceDict = faceList[0]
-        AttributeDict = faceDict["attributes"]
-        info["gender"] = AttributeDict["gender"]["value"]
-        info["age"] = AttributeDict["age"]["value"]
-        smileThreshold = AttributeDict["smile"]["threshold"]
-        smileValue = AttributeDict["smile"]["value"]
-        if (smileValue > smileThreshold):
-            info["smile"] = True
-        else:
-            info["smile"] = False
-        # todo：人脸姿势、人脸质量（用于人脸比对）
-        info["emotion"] = select(AttributeDict["emotion"])
-        info["eyestatus"] = select(AttributeDict["eyestatus"])
-        ethValue = AttributeDict["ethnicity"]["value"]
-        if ethValue == "Asian":
-            info["ethnicity"] = "asian"
-        elif ethValue == "White":
-            info["ethnicity"] = "white"
-        else:
-            info["ethnicity"] = "black"
-        result["issuccess"] = True
-        return JsonResponse(result, status=200)
+        result["message"] = u"需要登录"
+        return JsonResponse(result, status=403)
 
