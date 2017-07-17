@@ -1,3 +1,4 @@
+
 <?php
 
 // A list of permitted file extensions

@@ -57,6 +57,12 @@ $(function(){
 
     // Initialize the jQuery File Upload plugin
     $('#upload').fileupload({
+        // how to use these parameter
+        // https://github.com/blueimp/jQuery-File-Upload/wiki/Options
+
+        url : "/detect",
+        type : "POST",
+        dataType : "json",
 
         // This element will accept file drag/drop uploading
         dropZone: $('#drop'),
@@ -95,6 +101,19 @@ $(function(){
 
             // Automatically upload the file once it is added to the queue
             var jqXHR = data.submit();
+
+            // The jqXHR object returned by $.ajax()
+            // a superset of the browser's native XMLHttpRequest object.
+            // to read more : http://api.jquery.com/jQuery.ajax/#jqXHR
+
+            if (jqXHR.readyState==4 && jqXHR.status==200)
+              {
+                console.log(jqXHR.responseText);
+                var responseText = jQuery.parseJSON(jqXHR.responseText);
+                console.log(responseText);
+              }
+
+
         },
 
         progress: function(e, data){
