@@ -1758,6 +1758,9 @@ form label {
 .price-box.popular {
   border: 2px solid #f54c53;
 }
+
+
+
 .price-box.popular .popular-text {
   top: 0;
   left: 50%;
@@ -1807,12 +1810,13 @@ form label {
 .pricing-info {
   padding: 0;
   margin: 0 0 30px 0;
+
 }
 .pricing-info li {
   padding: 0;
   margin: 0;
   list-style: none;
-  text-align: center;
+  text-align: left;
 }
 
 .fh5co-faq-list {

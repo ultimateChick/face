@@ -2,7 +2,7 @@
 	
 	'use strict';
 
-	var mobileMenuOutsideClick = function() {
+	/*var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
 	    var container = $("#gtco-offcanvas, .js-gtco-nav-toggle");
@@ -20,7 +20,7 @@
 	    }
 		});
 
-	};
+	};*/
 
 	var formTab = function() {
 
@@ -270,9 +270,20 @@
 		}
 	};
 
-	
+
+
+		setInterval('changeImg()',7000);
+		
+
+
+
+
+
+
+
+
 	$(function(){
-		mobileMenuOutsideClick();
+		//mobileMenuOutsideClick();
 		formTab();
 		offcanvasMenu();
 		burgerMenu();
@@ -282,7 +293,24 @@
 		goToTop();
 		loaderPage();
 		counterWayPoint();
+		
 	});
 
 
+
 }());
+
+var bgImg = new Array();
+		bgImg[0] = "images/img_8.jpg";
+		bgImg[1] = "images/img_4.jpg";
+		bgImg[2] = "images/img_3.jpg";
+var index = 0;
+
+function changeImg()
+		{
+			
+			var path = "url("+bgImg[index]+")";
+			$('.gtco-cover').css("background-image",path);
+			index =parseInt((Math.random()*5000)%3);
+		}
+		
