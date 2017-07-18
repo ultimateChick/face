@@ -15,9 +15,15 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from account.views import render_page
+from detect.views import render_detect_page, render_main_page
+
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include("account.urls")),
-    url(r'^detect/', include("detect.urls"))
+    url(r'^detect/', include("detect.urls")),
+    url(r'^$', view=render_page),
+    url(r"^home/$", view=render_main_page),
+
 ]

@@ -13,6 +13,10 @@ from account.sendemail import *
 # Create your views here.
 
 
+def render_page(request):
+    return render(request, template_name="log.html")
+
+
 def register(request):
     result = {"message": "unknown", "issuccess": False}
     if request.method == "POST":

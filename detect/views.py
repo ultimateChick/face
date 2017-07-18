@@ -11,7 +11,14 @@ from detect.models import *
 # Create your views here.
 
 api_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
-# todo:前端发请求还是后端发请求
+
+
+def render_main_page(request):
+    return render(request, template_name="index.html")
+
+
+def render_detect_page(request):
+    return render(request, template_name="pricing.html")
 
 
 def request_detect(file_path):
