@@ -94,7 +94,7 @@
 									</ul>
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<form action="index.html">
+											<form id="signup_form">
 												<div class="row form-group">
 													<div class="col-md-12">														
 														<label for="username">Username</label>
@@ -130,11 +130,11 @@
 										</div>
 
 										<div class="tab-content-inner" data-content="login">
-											<form action="index.html">
+											<form id="login_form">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username or Email</label>
-														<input type="text" class="form-control" id="username" required="required">
+														<input type="text" class="form-control" id="username_or_email" required="required">
 													</div>
 												</div>
 												<div class="row form-group">
@@ -184,6 +184,7 @@
 	<script src="/static/js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="/static/js/main.js"></script>
+    <script src="/static/js/account.js"></script>
 
 </div>
 </div>
