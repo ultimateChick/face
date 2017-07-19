@@ -9,17 +9,23 @@ from django.db import IntegrityError
 from account.models import Account
 from account.sendemail import *
 
+import json
 
 # Create your views here.
+
+
+def render_page(request):
+    return render(request, template_name="log.html")
 
 
 def register(request):
     result = {"message": "unknown", "issuccess": False}
     if request.method == "POST":
-        username = request.POST.get("username")
-        email = request.POST.get("email")
-        password = request.POST.get("password")
-        repeat_password = request.POST.get("rpassword")
+        form_info = json.loads(request.body.decode())
+        username = form_info["username"]
+        email = form_info["email"]
+        password = form_info["password"]
+        repeat_password = form_info["repeat_password"]
 
         if username and repeat_password and email and password:
             if Account.check_password(password, repeat_password):
@@ -50,16 +56,20 @@ def login(request):
     if request.user.is_authenticated():
         sys_logout(request)
     if request.method == "POST":
-        username_or_email = request.POST.get("username")
-        password = request.POST.get("password")
+        form_info = json.loads(request.body.decode())
+        username_or_email = form_info["username_or_email"]
+        password = form_info["password"]
         issuccess, user = Account.account_login(username_or_email, password)
         if issuccess:
             sys_login(request, user)
             result["issuccess"] = issuccess
+            return JsonResponse(result, status=200)
         else:
+            print user
             request["message"] = user
+            return JsonResponse(result, status=403)
 
-        return JsonResponse(result, status=200)
+
     else:
         result["message"] = "不支持的请求方式"
         return JsonResponse(result, status=405)
