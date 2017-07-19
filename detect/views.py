@@ -1,6 +1,7 @@
 # coding=utf-8
 import simplejson
 import requests
+import json
 
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -24,11 +25,15 @@ def render_detect_page(request):
     return render(request, template_name="pricing.html")
 
 
-def request_detect(file_path):
-    file = {"image_file": open(file_path, "rb")}
+def request_detect(img_url=None, file_path=None):
     info = {"api_key": api_key, "api_secret": api_secret,
             "return_attributes": "gender,age,smiling,headpose,facequality,blur,eyestatus,emotion,ethnicity"}
-    r = requests.post(api_url, data=info, files=file)
+    if file_path:
+        file = {"image_file": open(file_path, "rb")}
+        r = requests.post(api_url, data=info, files=file)
+    if img_url:
+        info["image_url"] = img_url
+        r = requests.post(api_url, data=info)
     return simplejson.loads(r.text)
 
 
@@ -59,9 +64,14 @@ def detect(request):
 
         else:
             f = request.FILES.get("file")
-            new_picture = Picture.objects.create()
-            file_path = new_picture.avatar_file_save(f)
-            dic = request_detect(file_path)
+            if f:
+                new_picture = Picture.objects.create()
+                file_path = new_picture.avatar_file_save(f)
+                dic = request_detect(file_path=file_path)
+            else:
+                form_info = json.loads(request.body.decode())
+                img_url = form_info["img_url"]
+                dic = request_detect(img_url=img_url)
             faceList = dic["faces"]
             faceDict = faceList[0]
             rectangleDict = faceDict["face_rectangle"]

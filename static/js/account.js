@@ -57,7 +57,11 @@ function registerF() {
 
         },
         error:function (json) {
-            alert(JSON.stringify(json));
+            var obj=jQuery.parseJSON(json);
+            console.log(obj);
+            console.log(obj.status);       //取json.dumps(data)字典的值status
+            console.log(obj.msg);
+            console.log(obj.data);
             alert("失败");
         }
     })
