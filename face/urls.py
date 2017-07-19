@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^detect/', include("detect.urls")),
     url(r'^$', view=render_page),
     url(r"^home/$", view=render_main_page),
-
+    url(r"^pricing/$", view=render_detect_page)
 ]

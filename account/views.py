@@ -1,5 +1,5 @@
 # coding=utf-8
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth import login as sys_login, logout as sys_logout
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
@@ -62,6 +62,7 @@ def login(request):
         issuccess, user = Account.account_login(username_or_email, password)
         if issuccess:
             sys_login(request, user)
+            # return HttpResponseRedirect("/home/")
             result["issuccess"] = issuccess
             return JsonResponse(result, status=200)
         else:

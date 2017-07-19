@@ -1,0 +1,2 @@
+1.django中遇到broken pipe，需要将ajax的async设置为false，使其同步，响应在connection的有效时间中。
+2.form的编写要将提交写在form体外，避免submit提交表单使ajax失效。

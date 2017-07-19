@@ -4,6 +4,7 @@ import requests
 
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 
 from face.settings import api_key, api_secret
 from detect.models import *
@@ -13,10 +14,12 @@ from detect.models import *
 api_url = "https://api-cn.faceplusplus.com/facepp/v3/detect"
 
 
+@login_required(login_url="/")
 def render_main_page(request):
     return render(request, template_name="index.html")
 
 
+@login_required(login_url="/")
 def render_detect_page(request):
     return render(request, template_name="pricing.html")
 
@@ -45,6 +48,7 @@ def select(dict):
     return result
 
 
+@login_required(login_url="/")
 def detect(request):
     info = {}
     result = {"message": "unknown", "info": info, "issuccess": False}

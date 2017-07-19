@@ -1,6 +1,11 @@
 /**
  * Created by q1367 on 2017/7/18.
  */
+
+// $(document).ready(function () {
+//     $.ajaxSetup = {async:false};
+// });
+
 function getLoginFormInfo() {
     var info = {
             "username_or_email": $("#login_form").find("#username_or_email").val(),
@@ -18,7 +23,7 @@ function loginF() {
         contentType:"application/json",
         type:"post",
         success:function () {
-            window.location.href = "/home";
+            window.location.href = "/home/";
         },
         error:function (json) {
             var message = json.message;
