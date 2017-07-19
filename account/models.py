@@ -30,19 +30,19 @@ class Account(models.Model):
         if user_query:
             raise IntegrityError
         else:
-            new_user = User.objects.create(username=username, password=password)
+            new_user = User.objects.create_user(username=username, password=password)
             new_account = Account.objects.create(user=new_user, username=username, email=email)
             new_account.build_password(password)
-            return new_account
 
     @staticmethod
     def account_login(username_or_email, password):
         try:
             validate_email(username_or_email)
-            account = Account.objects.get(username=username_or_email)
+            account = Account.objects.get(email=username_or_email)
             result_ = account.verify_password(password)
             if result_:
-                user = authenticate(username=username_or_email, password=password)
+                username = account.username
+                user = authenticate(username=username, password=password)
                 if user:
                     return True, user
                 else:
@@ -52,11 +52,10 @@ class Account(models.Model):
         except Account.DoesNotExist:
             return False, u"用户不存在"
         except ValidationError:
-            account = Account.objects.get(email=username_or_email)
+            account = Account.objects.get(username=username_or_email)
             result_ = account.verify_password(password)
             if result_:
-                username = account.username
-                user = authenticate(username=username, password=password)
+                user = authenticate(username=username_or_email, password=password)
                 if user:
                     return True, user
                 else:

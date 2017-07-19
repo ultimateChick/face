@@ -301,9 +301,9 @@
 }());
 
 var bgImg = new Array();
-		bgImg[0] = "images/img_8.jpg";
-		bgImg[1] = "images/img_4.jpg";
-		bgImg[2] = "images/img_3.jpg";
+		bgImg[0] = "/static/images/img_8.jpg";
+		bgImg[1] = "/static/images/img_4.jpg";
+		bgImg[2] = "/static/images/img_3.jpg";
 var index = 0;
 
 function changeImg()

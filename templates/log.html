@@ -77,7 +77,7 @@
 									</ul>
 									<div class="tab-content">
 										<div class="tab-content-inner active" data-content="signup">
-											<form action="index.html">
+											<form method="post" id="signup_form">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username</label>
@@ -105,18 +105,18 @@
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input  type="submit"  class="btn btn-primary" value="Sign up">
+														<input  type="submit"  class="btn btn-primary" value="Sign up" onclick="registerF()">
 													</div>
 												</div>
 											</form>
 										</div>
 
 										<div class="tab-content-inner" data-content="login">
-											<form action="index.html">
+											<form method="post" id="login_form">
 												<div class="row form-group">
 													<div class="col-md-12">
 														<label for="username">Username or Email</label>
-														<input type="text" class="form-control" id="username" required="required">
+														<input type="text" class="form-control" id="username_or_email" required="required">
 													</div>
 												</div>
 												<div class="row form-group">
@@ -128,7 +128,7 @@
 
 												<div class="row form-group">
 													<div class="col-md-12">
-														<input type="submit" id = "btn1" class="btn btn-primary" value="Login">
+														<input type="submit" id = "btn1" class="btn btn-primary" value="Login" onclick="loginF()">
 													</div>
 												</div>
 											</form>
@@ -166,6 +166,7 @@
 	<script src="/static/js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="/static/js/main.js"></script>
+    <script src="/static/js/account.js"></script>
 
 </div>
 </div>
