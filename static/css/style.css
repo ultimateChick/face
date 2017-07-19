@@ -15,7 +15,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: #2d2b2b;
   background: #ececec;
 }
 
@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   clear: both;
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
@@ -1265,6 +1265,7 @@ form label {
 }
 
 .btn-primary {
+  width: 100%;
   background: #f54c53;
   color: #fff;
   border: 2px solid #f54c53 !important;
@@ -1844,5 +1845,93 @@ form label {
     font-size: 26px;
   }
 }
+
+
+.intro-module {
+    background-color: #fff;
+    height: 495px;
+}
+
+.intro-module.img{
+      width: 493px;
+    height: 329px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.intro-module .content {
+    height: 329px;
+    margin: 0 auto;
+    padding-top: 82px;
+    width: 1140px;
+}
+
+.intro-module .detail {
+    width: 560px;
+    padding: 0 60 0 24px;
+    margin-left: 70px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ .file {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+.alert{
+  display:none;
+  font-size:12px;
+  color:#f00;
+  float:right;
+  padding: 0;
+  margin-bottom: 0;
+
+}
+
+
+
+ .form-url{
+  width: 218px;
+  display: inline;
+  float: right;
+  border:  2px solid #9abbd0;
+  border-radius: 0px;
+
+}
+
+.form-url:focus{
+      outline: none;
+    box-shadow: none;
+    border-color: #3777bf;
+}
+
+.btn-submit{
+  width: 114px;
+  height: 46px;
+  float: right;
+  display: inline-block;
+  border-radius: 0px;
+  background-color: #9abbd0;
+  border-color: #9abbd0;
+}
+
+.btn-submit:hover{
+  background-color: #8798a2;
+ 
+}
+
+
+.gtco-container hr{
+  margin-bottom: 40px;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
