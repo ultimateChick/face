@@ -283,7 +283,7 @@
 
 
 	$(function(){
-		//mobileMenuOutsideClick();
+	
 		formTab();
 		offcanvasMenu();
 		burgerMenu();
@@ -300,17 +300,11 @@
 
 }());
 
-var bgImg = new Array();
-		bgImg[0] = "/static/images/img_8.jpg";
-		bgImg[1] = "/static/images/img_4.jpg";
-		bgImg[2] = "/static/images/img_3.jpg";
-var index = 0;
 
 function changeImg()
-		{
-			
-			var path = "url("+bgImg[index]+")";
+		{	
+			var index =parseInt((Math.random()*5000)%9);
+			var path = "url(../static/images/img_"+index+".jpg)";
 			$('.gtco-cover').css("background-image",path);
-			index =parseInt((Math.random()*5000)%3);
+			
 		}
-		
