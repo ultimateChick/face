@@ -22,7 +22,12 @@ def render_main_page(request):
 
 @login_required(login_url="/")
 def render_detect_page(request):
-    return render(request, template_name="pricing.html")
+    return render(request, template_name="identify.html")
+
+
+@login_required(login_url="/")
+def render_compare_page(request):
+    return render(request, template_name="compare.html")
 
 
 def request_detect(img_url=None, file_path=None):

@@ -304,7 +304,7 @@
 function changeImg()
 		{	
 			var index =parseInt((Math.random()*5000)%9);
-			var path = "url(../static/images/img_"+index+".jpg)";
+			var path = "url(/static/images/img_"+index+".jpg)";
 			$('.gtco-cover').css("background-image",path);
 			
 		}

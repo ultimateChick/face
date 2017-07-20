@@ -18,7 +18,7 @@ import re
 
 
 class Account(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, blank=True, null=True)
     username = models.CharField(verbose_name=u"用户名", max_length=255, unique=True)
     password = models.CharField(verbose_name=u"密码", max_length=255, blank=True, null=True)
     email = models.EmailField(verbose_name=u"注册邮箱", unique=True)
@@ -30,8 +30,13 @@ class Account(models.Model):
         if user_query:
             raise IntegrityError
         else:
+            try:
+                new_account = Account.objects.create(username=username, email=email)
+            except IntegrityError, e:
+                raise IntegrityError, e
             new_user = User.objects.create_user(username=username, password=password)
-            new_account = Account.objects.create(user=new_user, username=username, email=email)
+            new_account.user = new_user
+            new_account.save()
             new_account.build_password(password)
 
     @staticmethod

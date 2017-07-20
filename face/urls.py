@@ -16,7 +16,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from account.views import render_page
-from detect.views import render_detect_page, render_main_page
+from detect.views import render_detect_page, render_main_page, render_compare_page
 
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^detect/', include("detect.urls")),
     url(r'^$', view=render_page),
     url(r"^home/$", view=render_main_page),
-    url(r"^pricing/$", view=render_detect_page)
+    url(r"^pricing/$", view=render_detect_page),
+    url(r"^compare/$", view=render_compare_page)
 ]

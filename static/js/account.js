@@ -53,16 +53,24 @@ function registerF() {
         processData: false,
         type:"post",
         success:function () {
-            alert("成功");
-
+            $(".tab").find(".gtco-second").click();
         },
         error:function (json) {
-            var obj=jQuery.parseJSON(json);
-            console.log(obj);
-            console.log(obj.status);       //取json.dumps(data)字典的值status
-            console.log(obj.msg);
-            console.log(obj.data);
-            alert("失败");
+            console.log(json.responseJSON.message);
+            var email_obj = $("#signup_form").find("#email_alert");
+            var username_obj = $("#signup_form").find("#username_alert");
+            if (json.responseJSON.message == "exist_username") {
+                email_obj.css("display", "none");
+                username_obj.css("color", "red");
+                username_obj.css("display", "inline");
+            }
+            else{
+                username_obj.css("display", "none");
+                email_obj.css("color", "red");
+                email_obj.css("display", "inline");
+            }
+
+
         }
     })
 }

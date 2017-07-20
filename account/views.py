@@ -32,8 +32,11 @@ def register(request):
                 try:
                     validate_email(email)
                     Account.new_account(username=username, email=email, password=password)
-                except IntegrityError:
-                    result["message"] = u"该用户名已被使用"
+                except IntegrityError, e:
+                    if format(str(e)).find("email") != -1:
+                        result["message"] = u"exist_email"
+                    else:
+                        result["message"] = u"exist_username"
                     return JsonResponse(result, status=402)
                 except ValidationError:
                     result["message"] = u"邮箱格式错误"
