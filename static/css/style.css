@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("/static/fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("/static/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/static/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/static/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/static/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  src: url("/fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   margin: 0;
@@ -107,6 +107,11 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
   padding: 20px 0;
   z-index: 1001;
+  background-color: #525f63;
+  opacity: 0.4;
+  max-width:1200px; 
+  left: inherit;
+
 }
 @media screen and (max-width: 768px) {
   .gtco-nav {
@@ -119,6 +124,11 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
+  
+}
+.gtco-nav #gtco-logo a{
+  color: #fff;
+  opacity: 1;
 }
 .gtco-nav #gtco-logo em {
   color: #f54c53;
@@ -489,7 +499,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .gtco-cover.gtco-cover-sm {
-  height: 600px;
+  height: 675px;
 }
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm {
@@ -1468,7 +1478,7 @@ form label {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(/static/images/loader.gif) center no-repeat #fff;
+  background: url(/images/loader.gif) center no-repeat #fff;
 }
 
 .js .animate-box {
@@ -1873,6 +1883,7 @@ form label {
     margin-left: 70px;
     display: inline-block;
     vertical-align: middle;
+    font-size: 14px;
 }
 
  .file {
@@ -1895,7 +1906,13 @@ form label {
 
 }
 
+#success-alert{
+  float: none;
+  text-align: center;
+  position: relative;
+  left: 42%;
 
+}
 
  .form-url{
   width: 218px;
@@ -1924,7 +1941,7 @@ form label {
 
 .btn-submit:hover{
   background-color: #8798a2;
- 
+  border-color: #8798a2;
 }
 
 
@@ -1938,7 +1955,7 @@ form label {
     height: 480px;
     background: no-repeat;
     background-size: contain;
-    padding-top: 86px;
+    padding-top: 60px;
 }
 
 .demand li {
@@ -1946,5 +1963,34 @@ form label {
     width: 33%;
     text-align: center;
 }
+
+.demand h3{
+  color:#fff;
+  font-size: 20px;
+}
+
+ .demand h2 {
+    color:#fff; 
+    text-align: center;
+    padding-bottom: 84px;
+    font-size: 30px;
+}
+
+
+
+video{
+    position: absolute;
+    top: 0px;
+    z-index: -1; 
+    width: 100%;
+    height: 100%;
+}
+
+#head-logo{
+
+  margin-bottom: 0px !important;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */
