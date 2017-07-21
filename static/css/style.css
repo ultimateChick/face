@@ -1229,7 +1229,7 @@ form label {
 }
 
 .gtco-nav-toggle {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 10px;
   z-index: 21;
@@ -1983,7 +1983,7 @@ video{
     top: 0px;
     z-index: -1; 
     width: 100%;
-    height: 100%;
+    
 }
 
 #head-logo{
