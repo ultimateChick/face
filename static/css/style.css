@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("/fonts/icomoon/icomoon.eot?srf3rx");
-  src: url("/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+  src: url("/static/fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("/static/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("/static/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("/static/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("/static/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1478,7 +1478,7 @@ form label {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(/images/loader.gif) center no-repeat #fff;
+  background: url(/static//images/loader.gif) center no-repeat #fff;
 }
 
 .js .animate-box {
