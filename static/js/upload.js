@@ -14,6 +14,17 @@ function upload() {
             processData:false,
             success:function (data) {
                 alert(JSON.stringify(data));
+                var dict = data.responseJSON.info;
+                $("#info").find("#age").attr("value", dict.age);
+                $("#info").find("#sex").attr("value", dict.gender);
+                $("#info").find("#race").attr("value", dict.ethnicity);
+                $("#info").find("#emotion").attr("value", dict.emotion);
+                $("#info").find("#smile").attr("value", dict.smile);
+                $("#info").find("#eye").attr("value", dict.eyestatus)
+            },
+            error:function (json) {
+                var dict = json.responseJSON;
+                
             }
         })
     });

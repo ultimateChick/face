@@ -13,10 +13,12 @@ Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.contrib.staticfiles import views
 from django.contrib import admin
 
 from account.views import render_page
 from detect.views import render_detect_page, render_main_page, render_compare_page
+# from face.settings import STATIC_ROOT
 
 
 urlpatterns = [
@@ -25,6 +27,7 @@ urlpatterns = [
     url(r'^detect/', include("detect.urls")),
     url(r'^$', view=render_page),
     url(r"^home/$", view=render_main_page),
-    url(r"^pricing/$", view=render_detect_page),
-    url(r"^compare/$", view=render_compare_page)
+    url(r"^detect/$", view=render_detect_page),
+    url(r"^compare/$", view=render_compare_page),
+    # url(r'^static/(?P<path>.*)$', views.serve, {'document_root': STATIC_ROOT}),
 ]

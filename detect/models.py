@@ -22,7 +22,7 @@ class Picture(models.Model):
             path = dir_relative + name
         return path, name
 
-    def avatar_file_save(self, f):
+    def pic_file_save(self, f):
         if not self.avatar_type_switch:
             self.avatar_type_switch = True
         path, name = Picture.get_avail_path(os.path.dirname(os.path.dirname(__file__)).replace('\\', '/') + '/',

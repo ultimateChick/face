@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 
 from face.settings import api_key, api_secret
+from face.Error import *
 from detect.models import *
 
 # Create your views here.
@@ -71,12 +72,16 @@ def detect(request):
             f = request.FILES.get("file")
             if f:
                 new_picture = Picture.objects.create()
-                file_path = new_picture.avatar_file_save(f)
+                file_path = new_picture.pic_file_save(f)
                 dic = request_detect(file_path=file_path)
             else:
                 form_info = json.loads(request.body.decode())
                 img_url = form_info["img_url"]
-                dic = request_detect(img_url=img_url)
+                if img_url:
+                    dic = request_detect(img_url=img_url)
+                else:
+                    result["message"] = "need more arguments"
+                    return JsonResponse(result, status=402)
             faceList = dic["faces"]
             faceDict = faceList[0]
             rectangleDict = faceDict["face_rectangle"]

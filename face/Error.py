@@ -1,0 +1,2 @@
+class VarError(Exception):
+    pass
