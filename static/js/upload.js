@@ -2,7 +2,6 @@
  * Created by lee on 17-7-19.
  */
 function upload() {
-    $("#upload").click(function () {
         $("#imgWait").show();
         var formData = new FormData();
         formData.append("myfile", document.getElementById("file1").files[0]);
@@ -14,7 +13,7 @@ function upload() {
             processData:false,
             success:function (data) {
                 alert(JSON.stringify(data));
-                var dict = data.responseJSON.info;
+                var dict = data.info;
                 $("#info").find("#age").attr("value", dict.age);
                 $("#info").find("#sex").attr("value", dict.gender);
                 $("#info").find("#race").attr("value", dict.ethnicity);
@@ -26,6 +25,5 @@ function upload() {
                 var dict = json.responseJSON;
 
             }
-        })
-    });
+        });
 }

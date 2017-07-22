@@ -17,15 +17,16 @@ class Picture(models.Model):
     @staticmethod
     def get_avail_path(dir_local, dir_relative, name):
         path = dir_relative + name
+        full_path = dir_local + path
         while os.path.exists(dir_local + path):
             name = str(hash(''.join(random.sample('qwertyuioplkjhgfdsazxcvbnm1234567890', 10)))) + name
             path = dir_relative + name
-        return path, name
+        return full_path, path, name
 
     def pic_file_save(self, f):
-        if not self.avatar_type_switch:
-            self.avatar_type_switch = True
-        path, name = Picture.get_avail_path(os.path.dirname(os.path.dirname(__file__)).replace('\\', '/') + '/',
+        # if not self.avatar_type_switch:
+        #     self.avatar_type_switch = True
+        full_path, path, name = Picture.get_avail_path(os.path.dirname(os.path.dirname(__file__)).replace('\\', '/') + '/',
                                             'media/img/', f.name)
         try:
             dest = open(os.path.dirname(os.path.dirname(__file__)).replace('\\', '/') + '/' + path, 'wb+')
@@ -36,4 +37,4 @@ class Picture(models.Model):
             dest.write(chunk)
         dest.close()
 
-        return "/media/img/%s" % self.avatar
+        return full_path

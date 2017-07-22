@@ -69,7 +69,7 @@ def detect(request):
             return JsonResponse(result, status=405)
 
         else:
-            f = request.FILES.get("file")
+            f = request.FILES.get("myfile")
             if f:
                 new_picture = Picture.objects.create()
                 file_path = new_picture.pic_file_save(f)

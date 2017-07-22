@@ -123,12 +123,15 @@
 						<br><br><br>
 						<!-- <hr> -->						
 						<div>
-							<input type="file" accept="image/png,image/jpeg" class="file" id="file1" name="fileName" />        					
-        				</div>
+                            <form enctype="multipart/form-data">
+                                <input type="file" accept="image/png,image/jpeg" class="file" id="file1" name="fileName" />
+                            </form>
+                            <button class="btn btn-submit" onclick="upload()">Analyze</button>
 
-					</div>						
-						<button class="btn btn-submit">Analyze</button>
-						<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			
+        				</div>
+					</div>
+
+						<input type="text" id = "upload" name="imgurl" class="form-control form-url">
 						<br>
 						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>						
 				</div>
