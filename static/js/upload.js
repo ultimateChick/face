@@ -20,11 +20,11 @@ function upload() {
                 $("#info").find("#race").attr("value", dict.ethnicity);
                 $("#info").find("#emotion").attr("value", dict.emotion);
                 $("#info").find("#smile").attr("value", dict.smile);
-                $("#info").find("#eye").attr("value", dict.eyestatus)
+                // $("#info").find("#eye").attr("value", dict.eyestatus)
             },
             error:function (json) {
                 var dict = json.responseJSON;
-                
+
             }
         })
     });
