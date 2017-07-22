@@ -70,7 +70,7 @@ def login(request):
             return JsonResponse(result, status=200)
         else:
             print user
-            request["message"] = user
+            result["message"] = user
             return JsonResponse(result, status=403)
 
 
