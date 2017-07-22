@@ -1900,10 +1900,13 @@ form label {
   display:none;
   font-size:12px;
   color:#f00;
-  float:right;
   padding: 0;
   margin-bottom: 0;
 
+}
+
+.nopic_alert{
+  float: left;
 }
 
 #success-alert{
@@ -1991,6 +1994,12 @@ video{
   margin-bottom: 0px !important;
 }
 
+.info{
 
+
+border-style: none;
+
+
+}
 
 /*# sourceMappingURL=style.css.map */

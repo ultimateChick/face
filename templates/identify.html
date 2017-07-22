@@ -51,6 +51,7 @@
 
 	
 	<div class="page-inner">
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(../static/images/img_6.jpg)">
 	 <nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
 			
@@ -110,72 +111,63 @@
 							<h1> Abilities</h1>
 							<p>Detects and locates faces in a picture, returning high-precision face box coordinates.</p>
 							<p>Face detection is the first step in the analysis and processing of human face. Identiface also supports storing the detected face metadata for later use, reducing unnecessary duplication of detection operations, and further saving you.</p>
-						</div>
-						
-					</div>					
-					
-					
+						</div>						
+					</div>															
 				</div>				
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col-md-4 col-md-push-1">
+				<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect = "fadeIn">
 					<div class="price-box">
-
 						<br><br><br>
 						<h3>upload your photo here</h3>
 						<br><br><br>
-						<!-- <hr> -->
-						
+						<!-- <hr> -->						
 						<div>
-							<input type="file" accept="image/png,image/jpeg" class="file" id="file1" name="fileName" />
-        					
+							<input type="file" accept="image/png,image/jpeg" class="file" id="file1" name="fileName" />        					
         				</div>
 
-					</div>
-
-						
+					</div>						
 						<button class="btn btn-submit">Analyze</button>
-
 						<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			
-        			
 						<br>
-							
-					
+						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>						
 				</div>
 
-				<div class="col-md-4 col-md-push-2">
+				<div class="col-md-4 col-md-push-2 animate-box" data-animate-effect = "fadeIn">
 					<div id = "info" class="price-box">
 						<h2 >Information</h2>
 						<hr>
 						<table>
 							<tr>
 								<td>Age:</td>
-								<td><input id="age"></td>
+								<td><input type="text" id="age" name="age" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
 								<td>Sex:</td>
-								<td><input id="sex"></td>
+								<td><input type="text" id="sex" name="sex" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
 								<td>Race:</td>
-								<td><input id="race"></td>
+								<td><input type="text" id="race" name="race" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
 								<td>Emotion:</td>
-								<td><input id="emotion"></td>
+								<td><input type="text" id="emotion" name="emotion" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
 								<td>Smile:</td>
-								<td><input id="smile"></td>
+								<td><input type="text" id="smile" name="smile" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
-								<td>Eye status:</td>
-								<td><input id="eye"></td>
+								<td>Left eye:</td>
+								<td><input type="text" id="left-eye" name="left-eye" class="info" readonly="readonly"></td>
+							</tr>
+							<tr>								
+								<td>Right eye:</td>
+								<td><input type="text" id="right-eye" name="right-eye" class="info" readonly="readonly"></td>																													
 							</tr>
 						</table>
-						<label for="age">Age</label>
-						<input type="text" name="Age">
 						<!-- <ul class="pricing-info">
 							<br>
 							<li>Age:</li>
@@ -189,7 +181,6 @@
 						
 					</div>
 				</div> 
-
 			</div>
 		</div>
 	</div>
@@ -198,14 +189,14 @@
 		<div class="gtco-container">
 			<div class="row row-p	b-md">
 
-				<div class="col-md-4">
+				<div class="col-md-4 animate-box" data-animate-effect = "fadeIn">
 					<div class="gtco-widget">
 						<h3>About Identiface</h3>
 						<p>Face detection can be regarded as a specific case of object-class detection. In object-class detection, the task is to find the locations and sizes of all objects in an image that belong to a given class. Examples include upper torsos, pedestrians, and cars.</p>
 					</div>
 				</div>
 
-				<div class="col-md-4 col-md-push-1">
+				<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect = "fadeIn">
 					<div class="gtco-widget">
 						<h3>Links</h3>
 						<ul class="gtco-footer-links">
@@ -218,7 +209,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4 animate-box" data-animate-effect = "fadeIn">
 					<div class="gtco-widget">
 						<h3>Get In Touch</h3>
 						<ul class="gtco-quick-contact">
@@ -231,7 +222,7 @@
 
 			</div>
 
-			<div class="row copyright">
+			<div class="row copyright animate-box" data-animate-effect = "fadeIn">
 				<div class="col-md-12">
 					<div class="col-md-4">
 						<p class="pull-left">
@@ -244,7 +235,7 @@
 								<li><a href="####">DaoS</a></li>
 							</ul>
 							<ol>
-								 Co<b>py</b>right © LaughengTeam All Right Reserved.
+								 Co<b>py</b>right ©  LaughengTeam All Right Reserved.
 							</ol>
 						</p>
 					</div>

@@ -51,6 +51,8 @@
 
 	
 	<div class="page-inner">
+
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(../static/images/img_6.jpg)">
 	 <nav class="gtco-nav" role="navigation">
 		<div class="gtco-container">
 			
@@ -105,7 +107,7 @@
 
 			<div class="intro-module">
 
-				<div class="content">
+				<div class="content animate-box  animate-slow fadeInUp" data-animate-effect="fadeInUp">
 					<div class="img">
 						<img src="/static/images/intro2.jpg">
 						<div class="detail">
@@ -132,7 +134,8 @@
 					</div>						
 					<button class="btn btn-submit">Analyze</button>
 					<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			       			
-					<br>											
+					<br>	
+					<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>											
 				</div>
 
 				<div class="col-md-4 col-md-push-3">
@@ -146,7 +149,8 @@
 					</div>						
 					<button class="btn btn-submit">Analyze</button>
 					<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			       			
-					<br>											
+					<br>		
+					<span class="alert nopic_alert" id="nopic_alert_2">Invalid URL or local file</span>										
 				</div>
 
 				
@@ -161,36 +165,28 @@
 						
 						<table>
 							<tr>
-								<td>Age:</td>
-								<td></td>
+								<td>confidence:</td>
+								<td> <input type="text" id="confidence" name="confidence" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
-								<td>Sex:</td>
-								<td></td>
+								<td>thresholds_1</td>
+								<td><input type="text" id="thresholds_1" name="thresholds_1" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
-								<td>Race:</td>
-								<td></td>
+								<td>thresholds_2</td>
+								<td><input type="text" id="thresholds_2" name="thresholds_2" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
-								<td>Emotion:</td>
-								<td></td>
+								<td>thresholds_3</td>
+								<td><input type="text" id="thresholds_3" name="thresholds_3" class="info" readonly="readonly"></td>
 							</tr>
 							<tr>
-								<td>Smile:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Left eye:</td>
-								<td></td>
-							</tr>
-							<tr>								
-								<td>Right eye:</td>
-								<td></td>																													
+								<td>posibility</td>
+								<td><input type="text" id="posibility" name="posibility" class="info" readonly="readonly"></td>
 							</tr>
 						</table>
-						<label for="age">Age</label>
-						<input type="text" name="Age">s
+						<!-- <label for="age">Age</label>
+						<input type="text" name="Age">s -->
 						<!-- <ul class="pricing-info">
 							<br>
 							<li>Age:</li>
