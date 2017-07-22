@@ -57,16 +57,19 @@ class Account(models.Model):
         except Account.DoesNotExist:
             return False, u"用户不存在"
         except ValidationError:
-            account = Account.objects.get(username=username_or_email)
-            result_ = account.verify_password(password)
-            if result_:
-                user = authenticate(username=username_or_email, password=password)
-                if user:
-                    return True, user
+            try:
+                account = Account.objects.get(username=username_or_email)
+                result_ = account.verify_password(password)
+                if result_:
+                    user = authenticate(username=username_or_email, password=password)
+                    if user:
+                        return True, user
+                    else:
+                        return False, u"账号异常"
                 else:
-                    return False, u"账号异常"
-            else:
-                return False, u"密码错误"
+                    return False, u"密码错误"
+            except Account.DoesNotExist:
+                return False, u"用户名不存在"
 
     @staticmethod
     def check_password(password, rpassword):
