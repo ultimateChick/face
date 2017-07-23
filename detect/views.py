@@ -97,7 +97,9 @@ def detect(request):
                 info["smile"] = False
             # todo：人脸姿势、人脸质量（用于人脸比对）
             info["emotion"] = select(AttributeDict["emotion"])
-            info["eyestatus"] = select(AttributeDict["eyestatus"])
+            eyestatus = AttributeDict["eyestatus"]
+            info["lefteye"] = select(eyestatus["left_eye_status"])
+            info["righteye"] = select(eyestatus["right_eye_status"])
             ethValue = AttributeDict["ethnicity"]["value"]
             if ethValue == "Asian":
                 info["ethnicity"] = "asian"
