@@ -75,14 +75,20 @@ def detect(request):
                 file_path = new_picture.pic_file_save(f)
                 dic = request_detect(file_path=file_path)
             else:
-                form_info = json.loads(request.body.decode())
-                img_url = form_info["img_url"]
+                # form_info = json.loads(request.body.decode())
+                img_url = request.POST.get("img_url")
                 if img_url:
                     dic = request_detect(img_url=img_url)
                 else:
                     result["message"] = "need more arguments"
                     return JsonResponse(result, status=402)
-            faceList = dic["faces"]
+            print dic
+            try:
+                faceList = dic["faces"]
+            except Exception:
+                err_message = dic["error_message"]
+                result["message"] = err_message
+                return JsonResponse(result, status=402)
             faceDict = faceList[0]
             rectangleDict = faceDict["face_rectangle"]
             AttributeDict = faceDict["attributes"]

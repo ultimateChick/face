@@ -4,7 +4,8 @@
 function upload() {
         $("#imgWait").show();
         var formData = new FormData();
-        formData.append("myfile", document.getElementById("file1").files[0]);
+        //formData.append("myfile", document.getElementById("file1").files[0]);
+        formData.append("img_url", $("#upload").val());
         $.ajax({
             url:"/detect/api/",
             type:"post",
