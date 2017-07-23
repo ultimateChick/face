@@ -46,7 +46,8 @@ def possibility(thresholds, confidence):
 
 @login_required(login_url="/")
 def compare(request):
-    result = {"message": "unknown", "isscuess":False}
+    result = {"message": "unknown", "isscuess": False}
+
     if request.method != "POST":
         result["message"] = "method not allowed"
         return JsonResponse(result, status=405)
@@ -61,15 +62,20 @@ def compare(request):
             file_path2 = new_pic2.pic_file_save(f2)
             dic = compare_request(file_path1=file_path1, file_path2=file_path2)
         else:
-            form_info = simplejson.loads(request.body.decode())
-            img_url1 = form_info["img_url1"]
-            img_url2 = form_info["img_url2"]
+            # form_info = simplejson.loads(request.body.decode())
+            img_url1 = request.POST.get("img_url1")
+            img_url2 = request.POST.get("img_url2")
             if img_url1 and img_url2:
                 dic = compare_request(img_url1=img_url1, img_url2=img_url2)
             else:
                 result["message"] = "need more arguments"
                 return JsonResponse(result, status=402)
-        confidence = dic["confidence"]  # 置信度
+        try:
+            confidence = dic["confidence"]  # 置信度
+        except Exception:
+            err_message = dic["error_message"]
+            result["message"] = err_message
+            return JsonResponse(result, status=402)
         thresholds = dic["thresholds"]
         p = possibility(thresholds, confidence)
         result["possibility"] = p
