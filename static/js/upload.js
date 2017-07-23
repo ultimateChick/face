@@ -27,3 +27,11 @@ function upload() {
             }
         });
 }
+
+
+function loading() {
+    if($("#file1").value != ""){
+        upload();
+    }
+
+}
