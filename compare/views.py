@@ -79,6 +79,7 @@ def compare(request):
         thresholds = dic["thresholds"]
         p = possibility(thresholds, confidence)
         result["possibility"] = p
+        result["isscuess"] = True
         return JsonResponse(result, status=200)
 
 

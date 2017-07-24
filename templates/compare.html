@@ -123,46 +123,61 @@
 			<br>
 			<hr>
 			<div class="row">
-				<div class="col-md-4 col-md-push-1">
-					<div class="price-box">
-						<br><br><br>
-						<h3>upload your photo here</h3>
-						<br><br><br>										
-						<div>
-							<input type="file" accept="image/png,image/jpeg" class="file" name="fileName" />       					
+				<div class="col-md-5 col-md-push-1">
+					<div class="img-box">
+
+        					<img  width="" height="" class="pic-upload"  src="/static/images/glasses.jpg" alt="  " id="uplPic1" />
+        			</div>
+        				<br>
+						<div class="upload-img">
+							<i class="ti-upload"></i>
+							<span>Local</span>
+                            <form enctype="multipart/form-data">
+                                <input type="file" accept="image/png,image/jpeg" class="btn-file" id="file1"  onchange = "localload()"/>
+                            </form>
         				</div>
-					</div>						
-					<button class="btn btn-submit">Analyze</button>
-					<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			       			
-					<br>	
-					<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>											
+
+
+						<input type="text" id = "imgurl1"  class="form-control form-url" placeholder="URL" />
+						<br>
+						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>
 				</div>
 
-				<div class="col-md-4 col-md-push-3">
-					<div class="price-box">
-						<br><br><br>
-						<h3>upload your photo here</h3>
-						<br><br><br>										
-						<div>
-							<input type="file" accept="image/png,image/jpeg" class="file" name="fileName" />       					
+				<div class="col-md-5 col-md-push-2">
+					<div class="img-box">
+
+        					<img  width="" height="" class="pic-upload"  src="/static/images/glasses.jpg" alt="  " id="uplPic2" />
+        			</div>
+        				<br>
+						<div class="upload-img">
+							<i class="ti-upload"></i>
+							<span>Local</span>
+                            <form enctype="multipart/form-data">
+                                <input type="file" accept="image/png,image/jpeg" class="btn-file" id="file2"  onchange = "localload()"/>
+                            </form>
         				</div>
-					</div>						
-					<button class="btn btn-submit">Analyze</button>
-					<input type="text" id = "imgurl" name="imgurl" class="form-control form-url" >			       			
-					<br>		
-					<span class="alert nopic_alert" id="nopic_alert_2">Invalid URL or local file</span>										
+
+
+						<input type="text" id = "imgurl2"  class="form-control form-url" placeholder="URL" />
+						<br>
+						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>
 				</div>
 
-				
+
 			</div>
+
 			<hr>
+			<div class="col-md-1 col-md-push-2">
+				<button class="btn btn-submit" id="btn-compare" onclick="urlload()" >Analyze</button>
+			</div>
+
 			<div class="row">
 				<div class="col-md-4 col-md-push-4 ">
 					<div id = "info" class="price-box ">
 
 						<h2 >Result</h2>
 						<br>
-						
+
 						<table>
 							<tr>
 								<td>confidence:</td>
@@ -197,11 +212,11 @@
 							<li>Left eye:</li>
 							<li>Right eye:</li>
 						</ul> -->
-						
+
 					</div>
-				</div> 
+				</div>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -223,7 +238,7 @@
 						<ul class="gtco-footer-links">
 							<li><a href="https://en.wikipedia.org/wiki/Face_detection">Wikipedia</a></li>
 							<li><a href="https://facedetection.com/">company</a></li>
-							<li><a href="https://web.stanford.edu/class/ee368/Project_03/Project/reports/ee368group02.pdf">paper</a></li>							
+							<li><a href="https://web.stanford.edu/class/ee368/Project_03/Project/reports/ee368group02.pdf">paper</a></li>
 							<li><a href="https://cmusatyalab.github.io/openface/">Github</a></li>
 							<li><a href="https://www.faceplusplus.com.cn/">Support</a></li>
 						</ul>
@@ -299,6 +314,8 @@
 	<script src="/static/js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="/static/js/main.js"></script>
+	<!--Upload-->
+	<script src="/static/js/upload-comp.js"></script>
 
 	</body>
 </html>

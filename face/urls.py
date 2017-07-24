@@ -25,9 +25,10 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include("account.urls")),
     url(r'^detect/', include("detect.urls")),
+    url(r'^compare/', include("compare.urls")),
     url(r'^$', view=render_page),
     url(r"^home/$", view=render_main_page),
     url(r"^detect/$", view=render_detect_page),
-    url(r"^compare/$", view=render_compare_page),
+    # url(r"^compare/$", view=render_compare_page),
     # url(r'^static/(?P<path>.*)$', views.serve, {'document_root': STATIC_ROOT}),
 ]

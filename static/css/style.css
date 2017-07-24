@@ -1886,15 +1886,96 @@ form label {
     font-size: 14px;
 }
 
- .file {
+.img-box{
+    zoom: 1;
+    width: 429px;
+    height: 400px;
+    background-color: #e4e4e4;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pic-upload{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align:middle;
+  position: relative;
+}
+
+ .btn-file {
     width: 100%;
     height: 100%;
+    top:0px;
+    left: 0px;
     opacity: 0;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    display: inline;
     z-index: 10;
 }
+
+.upload-img {
+
+      width: 100px;
+  height: 46px;
+  float: left;
+  display: inline-block;
+  border-radius: 0px;
+  background-color: #9abbd0;
+  border-color: #9abbd0;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  position: absolute;
+  font-size: 18px;
+}
+.upload-img:hover{
+  border: 1px solid #379edf;
+
+}
+
+
+
+.btn-submit{
+  width: 100px;
+  height: 46px;
+  float: right;
+  display: inline-block;
+  border-radius: 0px;
+  background-color: #9abbd0;
+  border-color: #9abbd0;
+  padding: 0px 0px 0px 0px;
+}
+
+.btn-submit:hover{
+  background-color: #8798a2;
+  border-color: #8798a2;
+}
+
+
+#btn-compare{
+  float: none;
+  display: block;
+
+}
+
+ .form-url{
+    width: 200px;
+  display: inline;
+  float: right;
+  border:  2px solid #9abbd0;
+  border-radius: 0px;
+
+}
+
+.form-url:focus{
+      outline: none;
+    box-shadow: none;
+    border-color: #3777bf;
+}
+
 
 .alert{
   display:none;
@@ -1916,37 +1997,6 @@ form label {
   left: 42%;
 
 }
-
- .form-url{
-  width: 218px;
-  display: inline;
-  float: right;
-  border:  2px solid #9abbd0;
-  border-radius: 0px;
-
-}
-
-.form-url:focus{
-      outline: none;
-    box-shadow: none;
-    border-color: #3777bf;
-}
-
-.btn-submit{
-  width: 114px;
-  height: 46px;
-  float: right;
-  display: inline-block;
-  border-radius: 0px;
-  background-color: #9abbd0;
-  border-color: #9abbd0;
-}
-
-.btn-submit:hover{
-  background-color: #8798a2;
-  border-color: #8798a2;
-}
-
 
 .gtco-container hr{
   margin-bottom: 40px;
@@ -1973,7 +2023,7 @@ form label {
 }
 
  .demand h2 {
-    color:#fff; 
+    color:#fff;
     text-align: center;
     padding-bottom: 84px;
     font-size: 30px;
@@ -1984,9 +2034,9 @@ form label {
 video{
     position: absolute;
     top: 0px;
-    z-index: -1; 
+    z-index: -1;
     width: 100%;
-    
+
 }
 
 #head-logo{
@@ -2001,5 +2051,7 @@ border-style: none;
 
 
 }
+
+
 
 /*# sourceMappingURL=style.css.map */

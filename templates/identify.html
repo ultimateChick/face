@@ -116,24 +116,26 @@
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect = "fadeIn">
-					<div class="price-box">
-						<br><br><br>
-						<h3>upload your photo here</h3>
-						<br><br><br>
-						<!-- <hr> -->						
-						<div>
-                            <form enctype="multipart/form-data">
-                                <input type="file" accept="image/png,image/jpeg" class="file" id="file1" name="fileName" onchange = "loading()"/>
-                            </form>
-                            <button class="btn btn-submit" onclick="upload()">Analyze</button>
+				<div class="col-md-5 col-md-push-1 animate-box" data-animate-effect = "fadeIn">
 
+						<!-- <hr> -->
+						<div class="img-box">
+
+        					<img  width="" height=""  class="pic-upload" src="/static/images/glasses.jpg" alt="  " id="uplPic" />
         				</div>
-					</div>
+        				<br>
+						<div class="upload-img">
+							<i class="ti-upload"></i>
+							<span>Local</span>
+                            <form enctype="multipart/form-data">
+                                <input type="file" accept="image/png,image/jpeg" class="btn-file" id="file1"  onchange = "localload()"/>
+                            </form>
+        				</div>
 
-						<input type="text" id = "upload" name="imgurl" class="form-control form-url">
+						<button class="btn btn-submit" onclick="urlload()" >Analyze</button>
+						<input type="text" id = "imgurl" name="imgurl" class="form-control form-url">
 						<br>
-						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>						
+						<span class="alert nopic_alert" id="nopic_alert_1">Invalid URL or local file</span>
 				</div>
 
 				<div class="col-md-4 col-md-push-2 animate-box" data-animate-effect = "fadeIn">
@@ -165,9 +167,9 @@
 								<td>Left eye:</td>
 								<td><input type="text" id="left-eye" name="left-eye" class="info" readonly="readonly"></td>
 							</tr>
-							<tr>								
+							<tr>
 								<td>Right eye:</td>
-								<td><input type="text" id="right-eye" name="right-eye" class="info" readonly="readonly"></td>																													
+								<td><input type="text" id="right-eye" name="right-eye" class="info" readonly="readonly"></td>
 							</tr>
 						</table>
 						<!-- <ul class="pricing-info">
@@ -180,9 +182,9 @@
 							<li>Left eye:</li>
 							<li>Right eye:</li>
 						</ul> -->
-						
+
 					</div>
-				</div> 
+				</div>
 			</div>
 		</div>
 	</div>
@@ -204,7 +206,7 @@
 						<ul class="gtco-footer-links">
 							<li><a href="https://en.wikipedia.org/wiki/Face_detection">Wikipedia</a></li>
 							<li><a href="https://facedetection.com/">company</a></li>
-							<li><a href="https://web.stanford.edu/class/ee368/Project_03/Project/reports/ee368group02.pdf">paper</a></li>							
+							<li><a href="https://web.stanford.edu/class/ee368/Project_03/Project/reports/ee368group02.pdf">paper</a></li>
 							<li><a href="https://cmusatyalab.github.io/openface/">Github</a></li>
 							<li><a href="https://www.faceplusplus.com.cn/">Support</a></li>
 						</ul>
@@ -254,7 +256,7 @@
 
 		</div>
 	</footer>
-	
+
 	</div>
 
 	</div>
